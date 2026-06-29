@@ -12,23 +12,23 @@
 
         <div>
             <p id="home-score-el">0</p>
-            <button onclick="twoPoints()">+2</button>
-            <button onclick="threePoints()">+3</button>
-            <button onclick="onePoint()">Bonus</button>
-            <button onclick="minusPoint()">-</button>
-            <button onclick="resetPoints()">Reset</button>
+            <button onclick="updateCounter(homeScoreEl, 2)">+2</button>
+            <button onclick="updateCounter(homeScoreEl, 3)">+3</button>
+            <button onclick="updateCounter(homeScoreEl, -1)">-</button>
+            <button onclick="updateCounter(homeScoreEl, 2)">Bonus</button>
+            <button onclick="resetCounter(homeScoreEl, 0)">Reset</button>
         </div>
 
         <div>
             <p id="timeout-el">0</p>
-            <button onclick="minusButton()">-</button>
-            <button onclick="plusButton()">+</button>
+            <button onclick="updateCounter(timeoutEl, -1)">-</button>
+            <button onclick="updateCounter(timeoutEl, 1)">+</button>
         </div>
 
         <div>
             <p id="quarter-el">0</p>
-            <button onclick="minusQuarter()">-</button>
-            <button onclick="plusQuarter()">+</button>
+            <button onclick="updateCounter(quarterEl, -1)">-</button>
+            <button onclick="updateCounter(quarterEl, 1)">+</button>
         </div>
 
         <script src="index.js"></script>
