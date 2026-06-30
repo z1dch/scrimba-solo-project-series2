@@ -12,24 +12,38 @@
 
         <div>
             <p id="home-score-el">0</p>
-            <button onclick="updateCounter(homeScoreEl, 2)">+2</button>
-            <button onclick="updateCounter(homeScoreEl, 3)">+3</button>
-            <button onclick="updateCounter(homeScoreEl, -1)">-</button>
-            <button onclick="updateCounter(homeScoreEl, 2)">Bonus</button>
+            <button onclick="updateCounter(homeScoreEl, 2, 0, 99)">+2</button>
+            <button onclick="updateCounter(homeScoreEl, 3, 0, 99)">+3</button>
+            <button onclick="updateCounter(homeScoreEl, -1, 0, 99)">-</button>
+            <button onclick="updateCounter(homeScoreEl, 2, 0, 99)">Bonus</button>
             <button onclick="resetCounter(homeScoreEl, 0)">Reset</button>
         </div>
 
         <div>
             <p id="timeout-el">0</p>
-            <button onclick="updateCounter(timeoutEl, -1)">-</button>
-            <button onclick="updateCounter(timeoutEl, 1)">+</button>
+            <button onclick="updateCounter(timeoutEl, -1, 0, 5)">-</button>
+            <button onclick="updateCounter(timeoutEl, 1, 0, 5)">+</button>
         </div>
 
         <div>
             <p id="quarter-el">0</p>
-            <button onclick="updateCounter(quarterEl, -1)">-</button>
-            <button onclick="updateCounter(quarterEl, 1)">+</button>
+            <button onclick="updateCounter(quarterEl, -1, 0, 4)">-</button>
+            <button onclick="updateCounter(quarterEl, 1, 0, 4)">+</button>
         </div>
+
+        <div>
+            <p id="minutes-el">00</p>
+            <button onclick="setTimer(minutesEl, -1, 0, 30)">-</button>
+            <button onclick="setTimer(minutesEl, 1, 0, 30)">+</button>
+        </div>
+
+        <div>
+            <p id="seconds-el">00</p>
+            <button onclick="setTimer(secondsEl, -1, 0, 59)">-</button>
+            <button onclick="setTimer(secondsEl, 1, 0, 59)">+</button>
+        </div>
+
+        <button id="play-pause-btn" onclick="toggleTimer()">PLAY</button>
 
         <script src="index.js"></script>
         
