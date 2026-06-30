@@ -21,4 +21,4 @@ Instead of writing separate, messy code for every single button, I focused on us
 
 This project is live and hosted on **Netlify**. 
 
-[🔗 Check out the Live Scoreboard]([https://sports-scoreboards.netlify.app/])
+[🔗 Check out the Live Scoreboard](https://sports-scoreboards.netlify.app/)
