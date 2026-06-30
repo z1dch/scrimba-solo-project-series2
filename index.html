@@ -4,49 +4,80 @@
     <head>
         <!-- <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-        
+        <link rel="stylesheet" href="index.css"/>
         <title> Basketball Score Board</title>
     </head>
 
     <body>
+        <div class="home-container">
+            <h2>HOME</h2>
+            <div>
+                <h3>SCORE</h3>
+                <p id="home-score-el">0</p>
+                <button onclick="updateCounter(homeScoreEl, 2, 0, 99)">+2</button>
+                <button onclick="updateCounter(homeScoreEl, 3, 0, 99)">+3</button>
+                <button onclick="updateCounter(homeScoreEl, -1, 0, 99)">-</button>
+                <button onclick="updateCounter(homeScoreEl, 1, 0, 99)">Bonus</button>
+                <button onclick="resetCounter(homeScoreEl, 0)">Reset</button>
+            </div>
 
-        <div>
-            <p id="home-score-el">0</p>
-            <button onclick="updateCounter(homeScoreEl, 2, 0, 99)">+2</button>
-            <button onclick="updateCounter(homeScoreEl, 3, 0, 99)">+3</button>
-            <button onclick="updateCounter(homeScoreEl, -1, 0, 99)">-</button>
-            <button onclick="updateCounter(homeScoreEl, 2, 0, 99)">Bonus</button>
-            <button onclick="resetCounter(homeScoreEl, 0)">Reset</button>
+            <div>
+                <h3>HOME TIMEOUT</h3>
+                <p id="home-timeout-el">0</p>
+                <button onclick="updateCounter(homeTimeoutEl, -1, 0, 5)">-</button>
+                <button onclick="updateCounter(homeTimeoutEl, 1, 0, 5)">+</button>
+            </div>
         </div>
 
-        <div>
-            <p id="timeout-el">0</p>
-            <button onclick="updateCounter(timeoutEl, -1, 0, 5)">-</button>
-            <button onclick="updateCounter(timeoutEl, 1, 0, 5)">+</button>
+        <div class="between-container">
+            <div>
+                <h3>GAME TIME</h3>
+                <div class="timer-container">
+                    <div>
+                        <button onclick="setTimer(minutesEl, 1, 0, 30)">+</button>
+                        <p id="minutes-el">00</p>
+                        <button onclick="setTimer(minutesEl, -1, 0, 30)">-</button>
+                    </div>
+                    <p>:</p>
+                    <div>
+                        <button onclick="setTimer(secondsEl, 1, 0, 59)">+</button>
+                        <p id="seconds-el">00</p>
+                        <button onclick="setTimer(secondsEl, -1, 0, 59)">-</button>
+                    </div>
+                </div>
+                <button id="play-pause-btn" onclick="toggleTimer()">PLAY</button>
+            </div>
+
+
+            <div>
+                <h3>QUARTER</h3>
+                <p id="quarter-el">0</p>
+                <button onclick="updateCounter(quarterEl, -1, 0, 4)">-</button>
+                <button onclick="updateCounter(quarterEl, 1, 0, 4)">+</button>
+            </div>
         </div>
 
-        <div>
-            <p id="quarter-el">0</p>
-            <button onclick="updateCounter(quarterEl, -1, 0, 4)">-</button>
-            <button onclick="updateCounter(quarterEl, 1, 0, 4)">+</button>
+        <div class="away-container">
+            <h2>AWAY</h2>
+            <div>
+                <h3>SCORE</h3>
+                <p id="away-score-el">0</p>
+                <button onclick="updateCounter(awayScoreEl, 2, 0, 99)">+2</button>
+                <button onclick="updateCounter(awayScoreEl, 3, 0, 99)">+3</button>
+                <button onclick="updateCounter(awayScoreEl, -1, 0, 99)">-</button>
+                <button onclick="updateCounter(awayScoreEl, 1   , 0, 99)">Bonus</button>
+                <button onclick="resetCounter(awayScoreEl, 0)">Reset</button>
+            </div>
+
+            <div>
+                <h3>AWAY TIMEOUT</h3>
+                <p id="away-timeout-el">0</p>
+                <button onclick="updateCounter(awayTimeoutEl, -1, 0, 5)">-</button>
+                <button onclick="updateCounter(awayTimeoutEl, 1, 0, 5)">+</button>
+            </div>
         </div>
-
-        <div>
-            <p id="minutes-el">00</p>
-            <button onclick="setTimer(minutesEl, -1, 0, 30)">-</button>
-            <button onclick="setTimer(minutesEl, 1, 0, 30)">+</button>
-        </div>
-
-        <div>
-            <p id="seconds-el">00</p>
-            <button onclick="setTimer(secondsEl, -1, 0, 59)">-</button>
-            <button onclick="setTimer(secondsEl, 1, 0, 59)">+</button>
-        </div>
-
-        <button id="play-pause-btn" onclick="toggleTimer()">PLAY</button>
-
-        <script src="index.js"></script>
         
+        <script src="index.js"></script>
     </body>
 
 </html>

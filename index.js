@@ -1,6 +1,8 @@
 
 const homeScoreEl = document.getElementById("home-score-el")
-const timeoutEl = document.getElementById("timeout-el")
+const homeTimeoutEl = document.getElementById("home-timeout-el")
+const awayScoreEl = document.getElementById("away-score-el")
+const awayTimeoutEl = document.getElementById("away-timeout-el")
 const quarterEl = document.getElementById("quarter-el")
 const minutesEl = document.getElementById("minutes-el")
 const secondsEl = document.getElementById("seconds-el")
