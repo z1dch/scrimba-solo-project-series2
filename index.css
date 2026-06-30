@@ -130,12 +130,29 @@ body {
 }
 
 
-
 .between-container h3{font-size: 24px;}
 #minutes-el {font-size: 120px;}
 .timer-container p {font-size: 120px;}
 #seconds-el {font-size: 120px;}
 #quarter-el {font-size: 72px;}
 
+.between-container h3 {
+    font-family: sans-serif;
+}
 
+/* ----------------------------- */
+
+/* Button Settings */
+
+button {
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: sans-serif;
+    background-color: #88928f;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
 
